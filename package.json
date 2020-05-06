@@ -1,0 +1,71 @@
+{
+  "name": "material-dashboard-react",
+  "version": "1.8.0",
+  "description": "Admin React",
+  "private": false,
+  "main": "dist/index.js",
+  "dependencies": {
+    "@material-ui/core": "4.3.2",
+    "@material-ui/icons": "4.2.1",
+    "chartist": "0.10.1",
+    "classnames": "2.2.6",
+    "history": "4.9.0",
+    "node-sass": "^4.14.1",
+    "perfect-scrollbar": "1.4.0",
+    "prop-types": "15.7.2",
+    "react": "16.9.0",
+    "react-chartist": "0.13.3",
+    "react-dom": "16.9.0",
+    "react-google-maps": "9.4.5",
+    "react-router-dom": "5.0.1",
+    "react-scripts": "3.1.0",
+    "react-swipeable-views": "0.13.3"
+  },
+  "scripts": {
+    "start": "react-app-rewired start",
+    "build": "react-app-rewired build",
+    "test": "react-app-rewired test",
+    "eject": "react-app-rewired eject"
+  },
+  "optionalDependencies": {
+    "@types/googlemaps": "3.37.3",
+    "@types/markerclustererplus": "2.1.33",
+    "ajv": "6.10.2",
+    "typescript": "3.5.3"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.7.7",
+    "babel-eslint": "^10.0.3",
+    "babel-plugin-module-resolver": "^4.0.0",
+    "babel-plugin-root-import": "^6.4.1",
+    "babel-preset-react-app": "^9.0.2",
+    "babel-register": "^6.26.0",
+    "eslint": "^6.6.0",
+    "concurrently": "^5.0.2",
+    "customize-cra": "^0.9.1",
+    "eslint-config-airbnb": "^18.0.1",
+    "eslint-import-resolver-babel-module": "^5.1.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-module-resolver": "^0.16.0",
+    "eslint-plugin-react": "^7.16.0",
+    "eslint-plugin-react-hooks": "^2.2.0",
+    "harmony-reflect": "^1.6.1",
+    "http-server": "^0.12.1",
+    "jest": "^24.9.0",
+    "prettier": "^1.19.1",
+    "react-app-rewired": "^2.1.5",
+    "eslint-config-prettier": "6.0.0",
+    "eslint-plugin-prettier": "3.1.0",
+    "gulp": "4.0.2",
+    "gulp-append-prepend": "1.0.8"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": []
+  }
+}
