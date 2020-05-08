@@ -1,0 +1,25 @@
+@import 'src/assets/sass/variables.scss';
+
+.Add {
+  position: relative;
+  .MuiSelect-icon {
+    display: none;
+  }
+  .add-component {
+    padding: 5px;
+    .span-add {
+      width: 25px;
+      height: 25px;
+      color: $white;
+      display: flex;
+      align-items: center;
+      border-radius: 50%;
+      justify-content: center;
+      background-color: $background_primary;
+      svg {
+        width: 20px;
+        height: 20px;
+      }
+    }
+  }
+}

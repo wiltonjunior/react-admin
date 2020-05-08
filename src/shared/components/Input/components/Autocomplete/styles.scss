@@ -1,0 +1,12 @@
+@import 'src/assets/sass/variables.scss';
+
+.Autocomplete {
+  .flag {
+    width: 15px;
+    height: 15px;
+  }
+  .MuiAutocomplete-popupIndicator,
+  .MuiAutocomplete-clearIndicator {
+    color: $background_primary;
+  }
+}

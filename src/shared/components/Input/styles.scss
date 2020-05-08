@@ -1,0 +1,27 @@
+@import 'src/assets/sass/variables.scss';
+
+.Input {
+  margin: 5px 0px;
+  .MuiFormControl-root {
+    width: 100%;
+    .MuiInputBase-root {
+      svg {
+        color: $background_primary;
+      }
+    }
+  }
+  .MuiFormLabel-root.Mui-focused {
+    color: #7f8c8d;
+  }
+  .MuiFormLabel-root.Mui-error {
+    color: #f44336;
+  }
+  .MuiFormHelperText-root.Mui-error {
+    right: 0px;
+    bottom: -20px;
+    position: absolute;
+  }
+  .MuiInput-underline:after {
+    border-bottom: 2px solid #7f8c8d;
+  }
+}

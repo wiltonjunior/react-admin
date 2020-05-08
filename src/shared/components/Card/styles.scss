@@ -1,0 +1,57 @@
+@import "src/assets/sass/variables.scss";
+
+.Card {
+  padding-top: 0px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  padding: 0 20px 20px 20px;
+  box-shadow: 0 0px 5px 0 rgba(0, 0, 0, 0.1), 0 5px 5px 0 rgba(0, 0, 0, 0.1);
+  .card_header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    .title {
+      h3 {
+        font-weight: 500;
+        line-height: 1.6;
+        font-size: 20px;
+        text-transform: uppercase;
+        font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+      }
+      span {
+        display: block;
+        color: $subtitle;
+        margin-top: 10px;
+        font-size: 18px;
+        font-weight: 600;
+        margin-bottom: 10px;
+        font-family: "Lato Light";
+      }
+    }
+  }
+  &.basic {
+    margin: 0;
+    .card_header {
+      margin: 20px 5px 10px 0px;
+      .title {
+        h3 {
+          margin: 0;
+          color: $subtitle;
+          font-size: 20px;
+          font-weight: 500;
+        }
+        span {
+          margin: 0;
+        }
+      }
+    }
+  }
+  .content {
+    margin-bottom: 20px;
+  }
+  .card_footer {
+    display: flex;
+    justify-content: flex-end;
+  }
+}

@@ -1,0 +1,27 @@
+@import 'src/assets/sass/variables.scss';
+
+.Table {
+  box-shadow: 0 0px 5px 0 rgba(0, 0, 0, 0.1), 0 5px 5px 0 rgba(0, 0, 0, 0.1);
+  .MuiTableCell-root {
+    height: 50px;
+    padding: 2px 20px;
+    &.Mui-selected,
+    .MuiTableRow-root {
+      background: linear-gradient(135deg, #ff6a13 0%, #d55000 100%);
+    }
+  }
+
+  .table_empty_list {
+    padding: 20px;
+    text-align: center;
+  }
+  .table_collapse {
+    padding: 20px;
+    box-shadow: 0 0px 5px 0 rgba(0, 0, 0, 0.1), 0 5px 5px 0 rgba(0, 0, 0, 0.1);
+  }
+  .icon_arrow {
+    width: 4rem;
+    padding: 0px;
+    color: $background_primary;
+  }
+}

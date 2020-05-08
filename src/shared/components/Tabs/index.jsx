@@ -1,17 +1,19 @@
 import React from "react";
-// nodejs library that concatenates classes
 import classNames from "classnames";
-// nodejs library to set properties for components
 import PropTypes from "prop-types";
 
 // material-ui components
 import { makeStyles } from "@material-ui/core/styles";
 import Tabs from "@material-ui/core/Tabs";
 import Tab from "@material-ui/core/Tab";
+
 // core components
-import Card from "@components/Card/Card.js";
-import CardBody from "@components/Card/CardBody.js";
-import CardHeader from "@components/Card/CardHeader.js";
+import Icon from "@components/Icon";
+import Card from "@components/CardFull";
+import CardBody from "@components/CardFull/CardBody.js";
+import CardHeader from "@components/CardFull/CardHeader.js";
+
+import Translate, { dict } from "@components/Translate";
 
 import styles from "@js/material-dashboard-react/components/customTabsStyle.js";
 
@@ -23,31 +25,34 @@ export default function CustomTabs(props) {
     setValue(value);
   };
   const classes = useStyles();
-  const { headerColor, plainTabs, tabs, title, rtlActive } = props;
+  const { headerColor, plainTabs, tabs, title } = props;
   const cardTitle = classNames({
     [classes.cardTitle]: true,
-    [classes.cardTitleRTL]: rtlActive
   });
   return (
     <Card plain={plainTabs}>
       <CardHeader color={headerColor} plain={plainTabs}>
-        {title !== undefined ? <div className={cardTitle}>{title}</div> : null}
+        {title !== undefined ? (
+          <div className={cardTitle}>
+            <Translate>{title}</Translate>
+          </div>
+        ) : null}
         <Tabs
           value={value}
           onChange={handleChange}
           classes={{
             root: classes.tabsRoot,
             indicator: classes.displayNone,
-            scrollButtons: classes.displayNone
+            scrollButtons: classes.displayNone,
           }}
           variant="scrollable"
           scrollButtons="auto"
         >
           {tabs.map((prop, key) => {
             var icon = {};
-            if (prop.tabIcon) {
+            if (prop.icon) {
               icon = {
-                icon: <prop.tabIcon />
+                icon: <Icon name={prop.icon} />,
               };
             }
             return (
@@ -55,22 +60,23 @@ export default function CustomTabs(props) {
                 classes={{
                   root: classes.tabRootButton,
                   selected: classes.tabSelected,
-                  wrapper: classes.tabWrapper
+                  wrapper: classes.tabWrapper,
                 }}
                 key={key}
-                label={prop.tabName}
+                label={dict.translate(prop.name)}
                 {...icon}
-              />
+              ></Tab>
             );
           })}
         </Tabs>
       </CardHeader>
       <CardBody>
         {tabs.map((prop, key) => {
-          if (key === value) {
-            return <div key={key}>{prop.tabContent}</div>;
-          }
-          return null;
+          return (
+            <div key={key} className={key === value ? "show" : "hide"}>
+              {prop.content}
+            </div>
+          );
         })}
       </CardBody>
     </Card>
@@ -84,16 +90,16 @@ CustomTabs.propTypes = {
     "danger",
     "info",
     "primary",
-    "rose"
+    "rose",
   ]),
   title: PropTypes.string,
   tabs: PropTypes.arrayOf(
     PropTypes.shape({
-      tabName: PropTypes.string.isRequired,
-      tabIcon: PropTypes.object,
-      tabContent: PropTypes.node.isRequired
+      name: PropTypes.string.isRequired,
+      con: PropTypes.object,
+      content: PropTypes.node.isRequired,
     })
   ),
   rtlActive: PropTypes.bool,
-  plainTabs: PropTypes.bool
+  plainTabs: PropTypes.bool,
 };

@@ -1,0 +1,23 @@
+@import 'src/assets/sass/variables.scss';
+
+.File {
+  .input-file {
+    display: none;
+    overflow: hidden;
+  }
+  .file-icon {
+    right: 0px;
+    cursor: pointer;
+    position: absolute;
+    color: $background_primary;
+  }
+  .input-label {
+    z-index: 100;
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+  .MuiInputAdornment-positionEnd {
+    margin-left: 0px;
+  }
+}

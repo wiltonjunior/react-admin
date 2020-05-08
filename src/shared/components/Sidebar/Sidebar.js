@@ -12,6 +12,7 @@ import ListItem from "@material-ui/core/ListItem";
 import ListItemText from "@material-ui/core/ListItemText";
 import Icon from "@material-ui/core/Icon";
 // core components
+import { dict } from "@components/Translate";
 import AdminNavbarLinks from "@components/Navbars/AdminNavbarLinks.js";
 
 import styles from "@js/material-dashboard-react/components/sidebarStyle.js";
@@ -33,15 +34,15 @@ export default function Sidebar(props) {
         if (prop.path === "/upgrade-to-pro") {
           activePro = classes.activePro + " ";
           listItemClasses = classNames({
-            [" " + classes[color]]: true
+            [" " + classes[color]]: true,
           });
         } else {
           listItemClasses = classNames({
-            [" " + classes[color]]: activeRoute(prop.layout + prop.path)
+            [" " + classes[color]]: activeRoute(prop.layout + prop.path),
           });
         }
         const whiteFontClasses = classNames({
-          [" " + classes.whiteFont]: activeRoute(prop.layout + prop.path)
+          [" " + classes.whiteFont]: activeRoute(prop.layout + prop.path),
         });
         return (
           <NavLink
@@ -63,7 +64,7 @@ export default function Sidebar(props) {
                 />
               )}
               <ListItemText
-                primary={prop.name}
+                primary={dict.translate(prop.name)}
                 className={classNames(classes.itemText, whiteFontClasses)}
                 disableTypography={true}
               />
@@ -75,11 +76,7 @@ export default function Sidebar(props) {
   );
   var brand = (
     <div className={classes.logo}>
-      <a
-        href="#"
-        className={classNames(classes.logoLink)}
-        target="_blank"
-      >
+      <a href="#" className={classNames(classes.logoLink)} target="_blank">
         <div className={classes.logoImage}>
           <img src={logo} alt="logo" className={classes.img} />
         </div>
@@ -95,11 +92,11 @@ export default function Sidebar(props) {
           anchor={"right"}
           open={props.open}
           classes={{
-            paper: classNames(classes.drawerPaper)
+            paper: classNames(classes.drawerPaper),
           }}
           onClose={props.handleDrawerToggle}
           ModalProps={{
-            keepMounted: true // Better open performance on mobile.
+            keepMounted: true, // Better open performance on mobile.
           }}
         >
           {brand}
@@ -121,7 +118,7 @@ export default function Sidebar(props) {
           variant="permanent"
           open
           classes={{
-            paper: classNames(classes.drawerPaper)
+            paper: classNames(classes.drawerPaper),
           }}
         >
           {brand}
@@ -145,5 +142,5 @@ Sidebar.propTypes = {
   image: PropTypes.string,
   logoText: PropTypes.string,
   routes: PropTypes.arrayOf(PropTypes.object),
-  open: PropTypes.bool
+  open: PropTypes.bool,
 };

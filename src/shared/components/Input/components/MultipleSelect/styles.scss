@@ -1,0 +1,9 @@
+@import 'src/assets/sass/variables.scss';
+
+.menu-group {
+  border-top: 1px solid gray !important;
+}
+
+.MuiCheckbox-colorPrimary.Mui-checked {
+  color: $background_primary !important;
+}

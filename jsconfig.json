@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "paths": {
+      "*": ["src/*"],
+      "@i18n/*": ["src/i18n/*"],
+      "@utils/*": ["src/utils/*"],
+      "@configs/*": ["src/configs/*"],
+      "@assets/*": ["src/assets/*"],
+      "@scss/*": ["src/assets/scss/*"],
+      "@images/*": ["src/assets/images/*"],
+      "@pages/*": ["src/pages/*"],
+      "@routes/*": ["src/routes/*"],
+      "@shared/*": ["src/shared/*"],
+      "@components/*": ["src/shared/components/*"],
+      "@constants/*": ["src/shared/constants/*"],
+      "@contexts/*": ["src/shared/contexts/*"],
+      "@services/*": ["src/shared/services/*"],
+      "underscore": ["lodash"]
+    }
+  }
+}

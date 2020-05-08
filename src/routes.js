@@ -1,25 +1,16 @@
-import Dashboard from "@material-ui/icons/Dashboard";
 import Person from "@material-ui/icons/Person";
-import SupervisorAccount from "@material-ui/icons/SupervisorAccount";
+import Extension from "@material-ui/icons/Extension";
+import Dashboard from "@material-ui/icons/Dashboard";
 
-import LibraryBooks from "@material-ui/icons/LibraryBooks";
 import BubbleChart from "@material-ui/icons/BubbleChart";
-import LocationOn from "@material-ui/icons/LocationOn";
-import Notifications from "@material-ui/icons/Notifications";
 import Unarchive from "@material-ui/icons/Unarchive";
 
 // core components/views for Admin layout
-import Maps from "@pages/Maps/Maps.js";
 import Icons from "@pages/Icons/Icons.js";
-import TableList from "@pages/TableList/TableList.js";
-import Typography from "@pages/Typography/Typography.js";
 import DashboardPage from "@pages/Dashboard/Dashboard.js";
 import UserProfile from "@pages/UserProfile/UserProfile.js";
 
-import Users from "@pages/Users";
-import NotificationsPage from "@pages/Notifications/Notifications.js";
-
-import UpgradeToPro from "@pages/UpgradeToPro/UpgradeToPro.js";
+import Trial from "@pages/Trial";
 
 const dashboardRoutes = [
   {
@@ -37,26 +28,11 @@ const dashboardRoutes = [
     layout: "/admin"
   },
   {
-    name: "Uses",
-    path: "/users",
-    component: Users,
+    name: "ROUTER_TRIAL",
+    path: "/trial",
+    component: Trial,
     layout: "/admin",
-    icon: SupervisorAccount
-  },
-  {
-    path: "/table",
-    name: "Table List",
-    icon: "content_paste",
-    component: TableList,
-    layout: "/admin"
-  },
-  {
-    path: "/typography",
-    name: "Typography",
-
-    icon: LibraryBooks,
-    component: Typography,
-    layout: "/admin"
+    icon: Extension
   },
   {
     path: "/icons",
@@ -66,24 +42,9 @@ const dashboardRoutes = [
     layout: "/admin"
   },
   {
-    path: "/maps",
-    name: "Maps",
-    icon: LocationOn,
-    component: Maps,
-    layout: "/admin"
-  },
-  {
-    path: "/notifications",
-    name: "Notifications",
-    icon: Notifications,
-    component: NotificationsPage,
-    layout: "/admin"
-  },
-  {
     path: "/upgrade-to-pro",
     name: "Upgrade To PRO",
     icon: Unarchive,
-    component: UpgradeToPro,
     layout: "/admin"
   }
 ];

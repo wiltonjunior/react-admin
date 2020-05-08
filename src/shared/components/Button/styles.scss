@@ -1,0 +1,15 @@
+@import 'src/assets/sass/variables.scss';
+
+.Button {
+  &.MuiButton-root {
+    border: none;
+    cursor: pointer;
+    min-width: 200px;
+    padding: 10px 20px;
+    span {
+      font-size: 16px;
+      color: $white;
+      text-transform: capitalize;
+    }
+  }
+}

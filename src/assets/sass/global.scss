@@ -1,0 +1,141 @@
+@import 'src/assets/sass/variables.scss';
+
+body,
+html {
+  margin: 0;
+  width: 100%;
+  font-family: 'Lato Regular';
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span {
+  font-family: 'Lato Regular';
+}
+
+.red {
+  color: $background_primary;
+}
+
+.point {
+  cursor: pointer;
+}
+
+p {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+.flex {
+  display: flex;
+}
+
+.center-x {
+  justify-content: center;
+}
+
+.center-y {
+  align-items: center;
+}
+
+.mg-0 {
+  margin: 0 !important;
+}
+
+.mr-10 {
+  margin-right: 10px;
+}
+
+.mr-5 {
+  margin-right: 5px;
+}
+
+.pd-0 {
+  padding: 0px !important;
+}
+
+.px-0 {
+  padding-left: 0px !important;
+  padding-right: 0px !important;
+}
+
+.py-0 {
+  padding-top: 0px !important;
+  padding-bottom: 0px !important;
+}
+
+.card_footer {
+  display: flex;
+  margin-top: 20px;
+  justify-content: flex-end;
+}
+
+.image-radios {
+  width: 30px;
+  height: 30px;
+  margin-top: 5px;
+  margin-right: 10px;
+  border-radius: 100%;
+}
+
+.form {
+  .MuiGrid-item {
+    padding: 0px 12px !important;
+  }
+}
+
+.hide {
+  display: none !important;
+}
+
+.swal2-container {
+  .swal2-modal {
+    .swal2-actions {
+      display: flex;
+      text-align: center;
+      button {
+        outline: none;
+        width: 12rem;
+        border: none;
+        cursor: pointer;
+        background: none;
+        min-width: 200px;
+        padding: 0.8rem 20px;
+        border-radius: 4px;
+        box-shadow: 0 0px 5px 0 rgba(0, 0, 0, 0.1),
+          0 5px 5px 0 rgba(0, 0, 0, 0.1);
+      }
+      .swal2-confirm {
+        background: linear-gradient(
+          to right,
+          $background_primary 0%,
+          $background_primary_black 100%
+        );
+
+        &:hover {
+          background: linear-gradient(
+            to right,
+            $background_primary 0%,
+            $background_primary_black 100%
+          );
+        }
+      }
+      .swal2-cancel {
+        color: $title;
+        background-color: $white !important;
+        border: 1px solid $background_primary;
+        span {
+          color: $title;
+        }
+      }
+    }
+  }
+}

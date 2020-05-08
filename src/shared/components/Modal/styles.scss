@@ -1,0 +1,21 @@
+@import 'src/assets/sass/variables.scss';
+
+.Modal {
+  .MuiDialog-paperWidthSm {
+    width: 100%;
+    max-width: 1000px;
+  }
+  .MuiTypography-gutterBottom {
+    margin-bottom: 1.35em;
+  }
+  .MuiDialogContent-root {
+    padding: 2rem 1.5rem;
+    padding-bottom: 3rem;
+  }
+  .actions{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+  }
+}

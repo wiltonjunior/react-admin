@@ -1,0 +1,66 @@
+@import 'src/assets/sass/variables.scss';
+
+.Table .TableToolbar {
+  display: flex;
+  padding: 0;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  .header_filters {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .MuiTypography-h6 {
+      display: flex;
+      width: 100%;
+      min-height: 50px;
+      align-items: center;
+      padding-left: 20px;
+    }
+    .Input {
+      margin: 0;
+      min-width: 20rem;
+      padding-right: 20px;
+      .MuiFormControl-root {
+        .MuiInputLabel-formControl {
+          transform: translate(0, 15px) scale(1);
+        }
+        .MuiInputLabel-shrink {
+          transform: translate(0, 0px) scale(0.8);
+        }
+        .MuiInputBase-formControl {
+          margin-top: 5px;
+          input {
+            height: 1.5rem;
+            font-size: 1rem;
+            padding-bottom: 0;
+          }
+        }
+      }
+    }
+  }
+  .selectHeader {
+    display: flex;
+    width: 100%;
+    color: red;
+    min-height: 50px;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgba(245, 0, 87, 0.08);
+    .MuiTypography-subtitle1 {
+      padding-left: 20px;
+    }
+    .header_actions {
+      padding-right: 20px;
+      .MuiButtonBase-root {
+        .MuiIconButton-label {
+          svg {
+            width: 30px !important;
+            height: 30px !important;
+          }
+        }
+      }
+    }
+  }
+}
